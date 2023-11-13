@@ -1,4 +1,4 @@
-# 자기소개하기:person_frowning:
+# 자기소개하기 :person_frowning:
 :sparkles::sparkles:
 
 
@@ -7,8 +7,8 @@
 
 
 
-> 자기소개
->   1. 이름
+> 자기소개 :person_frowning:
+>   1. 이름 :person_frowning:
 >   > 정 동 섭
 >
 >   2. MBTI
