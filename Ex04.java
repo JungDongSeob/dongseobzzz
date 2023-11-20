@@ -1,26 +1,53 @@
 package Day01;
 
-import javax.print.DocFlavor;
-import java.util.Random;
-import java.util.Scanner;
-
-public class Ex04 {
+public class RSC {
     public static void main(String[] args) {
+        Player player01;
+        Player player02;
+
+        player01 = new Player();
+        player02 = new Player();
+
+        player01.Player = "player01";
+        player02.Player = "player02";
+
         // 1은 가위, 2는 바위, 3은 보
-        int []RSC={1,2,3};
-        Random rand = new Random();
-        // Player는 이름이 있고 가위 바위 보 중 하나를 저장할 수 있다.
-        Player player01 = null;
-        Player player02 = null;
-        // player01이 가위, 바위, 보 중 랜덤하게 하나를 선택
+        while (true) {
+            player01.RSC = (int) (Math.random() * 3) + 1;
+            player02.RSC = (int) (Math.random() * 3) + 1;
 
-        player01.RSC = RSC[rand.nextInt(3)];
+            System.out.println("player01의 선택 : " + player01.RSC);
+            System.out.println("player02의 선택 : " + player02.RSC);
 
-        //player01 = RSC[rand.nextInt(3)];
-        // player02가 가위, 바위, 보 중 랜덤하게 하나를 선택
-        
-        // 둘 중에 이긴 사람 출력, 무승부면 계속 반복
+            if (player01.RSC == 1) {
+                if (player02.RSC == 2) {
+                    System.out.println("player02 win!");
+                    break;
+                } else if (player02.RSC == 3) {
+                    System.out.println("player01 win!");
+                    break;
+                } else
+                    System.out.println("무승부");
+            } else if (player01.RSC == 2) {
+                if (player02.RSC == 3) {
+                    System.out.println("player02 win!");
+                    break;
+                } else if (player02.RSC == 1) {
+                    System.out.println("player01 win!");
+                    break;
+                } else
+                    System.out.println("무승부");
+            } else if (player01.RSC == 3) {
+                if (player02.RSC == 1) {
+                    System.out.println("player02 win!");
+                    break;
+                } else if (player02.RSC == 2) {
+                    System.out.println("player01 win!");
+                    break;
+                } else
+                    System.out.println("무승부");
+            }
 
-
+        }
     }
 }
